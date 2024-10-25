@@ -17,7 +17,7 @@ load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-st.title("Chatgroq using Llama3")
+st.title("Llama3 Q&A Bot")
 
 # Creating the model
 llm = ChatGroq(groq_api_key = groq_api_key,
