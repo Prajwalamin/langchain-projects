@@ -11,11 +11,11 @@ from langchain_community.document_loaders import PyPDFDirectoryLoader
 import time 
 
 from dotenv import load_dotenv 
-load_dotenv(dotenv_path="../.env")
+load_dotenv()
 
 # Load the GROQ and OpenAI API KEY 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-groq_api_key = ""
+groq_api_key = os.getenv("GROQ_API_KEY")
 
 st.title("Chatgroq using Llama3")
 
