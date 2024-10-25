@@ -17,7 +17,7 @@ load_dotenv(dotenv_path="../.env")
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 groq_api_key = ""
 
-st.title("Chatgroq with Llama3 Demo")
+st.title("Chatgroq using Llama3")
 
 # Creating the model
 llm = ChatGroq(groq_api_key = groq_api_key,
@@ -41,7 +41,7 @@ def vector_embedding():
     if "vectors" not in st.session_state:
 
         st.session_state.embeddings = OpenAIEmbeddings()
-        st.session_state.loader = PyPDFDirectoryLoader("./us_census") # Data Ingestion
+        st.session_state.loader = PyPDFDirectoryLoader("./papers") # Data Ingestion
         st.session_state.docs = st.session_state.loader.load() # Document Loading
         st.session_state.text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200) # Chunk Creation
         st.session_state.final_documents = st.session_state.text_splitter.split_documents(st.session_state.docs[:20]) # Test Splitting 
