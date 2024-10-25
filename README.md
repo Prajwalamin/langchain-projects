@@ -1,5 +1,5 @@
 ## Groq Llama3 Model 
 
-Groq llama3 model trained for reading documents and answering queries based on the documents.
+Llama3 model trained through Groq API that allows the user to provide a document and send queries to the model relevant to the document.
 
-`Please replace groq_api_key with your own api key`
+`!Please replace groq_api_key with your own api key`
